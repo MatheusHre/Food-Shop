@@ -15,6 +15,7 @@ const Foods = () => {
 
   useEffect(() => {
     axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${srcomida}`)
+    axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${srcomida}`)
       .then(resposta => setSrcComida(resposta.data.meals))
   }, [srcomida]);
 
